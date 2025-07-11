@@ -1,0 +1,16 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "This is the first weather built from pure Java Script ",
+  "repository": {
+    "type": "git",
+    "url": "Weather-app-from-core-web-tech"
+  },
+  "license": "ISC",
+  "author": "Mustafa Kabul",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "API testing"
+  }
+}

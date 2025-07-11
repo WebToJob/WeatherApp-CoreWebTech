@@ -1,0 +1,5 @@
+@import "root-vars.css";
+
+body {
+    background-color: var(--body-background-color);
+}
