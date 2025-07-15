@@ -1,3 +1,4 @@
 :root{
-    --body-background-color: #2e86a2;
+    --body-background-color: linear-gradient(to right, #626298,
+    #5252d5);
 }
