@@ -21,10 +21,37 @@ body {
     border-radius: 16px;
     width: 500px;
     height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    /* creating grid */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
     overflow: scroll;
+}
+/*writing styles for sections*/
+
+/*search*/
+#search{
+    background-color: lightblue;
+    grid-column: 1/-1;
+}
+/*weather-icon*/
+#weather-icon{
+    background-color: aqua;
+    grid-column: 1/-1;
+}
+/*weather-info*/
+#weather-info{
+    background-color: yellow;
+    grid-column: 1/2;
+}
+
+/*wind*/
+#wind{
+    background-color: lightgreen;
+}
+
+/*forecast*/
+#forecast{
+    background-color: orange;
+    grid-column: 1/-1;
 }
