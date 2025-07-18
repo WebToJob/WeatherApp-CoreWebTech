@@ -16,8 +16,8 @@ body {
 }
 
 .container{
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background-color: var(--card-background-color);
+    box-shadow: 0 4px 24px rgba(98, 98, 152, 0.12);
     border-radius: 16px;
     width: 500px;
     height: 80%;
@@ -26,32 +26,4 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     overflow: scroll;
-}
-/*writing styles for sections*/
-
-/*search*/
-#search{
-    background-color: lightblue;
-    grid-column: 1/-1;
-}
-/*weather-icon*/
-#weather-icon{
-    background-color: aqua;
-    grid-column: 1/-1;
-}
-/*weather-info*/
-#weather-info{
-    background-color: yellow;
-    grid-column: 1/2;
-}
-
-/*wind*/
-#wind{
-    background-color: lightgreen;
-}
-
-/*forecast*/
-#forecast{
-    background-color: orange;
-    grid-column: 1/-1;
 }

@@ -1,0 +1,64 @@
+@import "root-vars.css";
+/*writing styles for sections*/
+
+/*search*/
+#search{
+    grid-column: 1/-1;
+}
+
+/*search form element*/
+#search-form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/*search button*/
+
+#search-btn{
+    width: 15%;
+    height: 25%;
+    background-color: var(--button-background-color);
+    border:20px solid var(--accent-background-color);
+    border-radius: 10px;
+}
+
+#search-btn:hover{
+    /* giving shadow effect on hover with modern background color with change in its background color also*/
+    background-color: var(--button-hover-background-color);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+#city-input{
+    width: 70%;
+    height: 25%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+}
+
+/*weather-icon*/
+#weather-icon{
+    background-color: aqua;
+    grid-column: 1/-1;
+}
+/*weather-info*/
+#weather-info{
+    background-color: yellow;
+    grid-column: 1/2;
+}
+
+/*wind*/
+#wind{
+    background-color: lightgreen;
+}
+
+/*forecast*/
+#forecast{
+    background-color: orange;
+    grid-column: 1/-1;
+}

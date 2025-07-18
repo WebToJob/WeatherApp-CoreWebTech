@@ -10,7 +10,12 @@
 <!--    container class-->
     <div class="container">
 <!--        creating sections for the content of the page-->
-        <section id="search"></section>
+        <section id="search">
+            <form id="search-form">
+                <label for="city-input"></label><input type="text" id="city-input" placeholder="Enter city name" >
+                <button type="submit" id="search-btn">Search</button>
+            </form>
+        </section>
 
         <section id="weather-icon">
 <!--            here the icon for weather will appear-->
@@ -33,5 +38,6 @@
 <!--    container class end-->
 </body>
 <link rel="stylesheet" href="../CSS/home.css">
+<link rel="stylesheet" href="../CSS/LayoutDesign.css">
 
 </html>
