@@ -22,8 +22,9 @@
     width: 15%;
     height: 25%;
     background-color: var(--button-background-color);
-    border:20px solid var(--accent-background-color);
+    border: none;
     border-radius: 10px;
+    text-align: center;
 }
 
 #search-btn:hover{
