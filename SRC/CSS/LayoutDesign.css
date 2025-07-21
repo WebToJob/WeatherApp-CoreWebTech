@@ -2,12 +2,12 @@
 /*writing styles for sections*/
 
 /*search*/
-#search{
+#search {
     grid-column: 1/-1;
 }
 
 /*search form element*/
-#search-form{
+#search-form {
     height: 100%;
     width: 100%;
     display: flex;
@@ -18,7 +18,7 @@
 
 /*search button*/
 
-#search-btn{
+#search-btn {
     width: 15%;
     height: 25%;
     background-color: var(--button-background-color);
@@ -27,13 +27,13 @@
     text-align: center;
 }
 
-#search-btn:hover{
+#search-btn:hover {
     /* giving shadow effect on hover with modern background color with change in its background color also*/
     background-color: var(--button-hover-background-color);
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
 }
 
-#city-input{
+#city-input {
     width: 70%;
     height: 25%;
     border-radius: 10px;
@@ -43,23 +43,32 @@
 }
 
 /*weather-icon*/
-#weather-icon{
-    background-color: aqua;
+#weather-icon {
     grid-column: 1/-1;
+    justify-content: space-between;
 }
+
+#weather-icon-img {
+    height: 100%;
+    width: 100%;
+}
+
+/*weather icon h1*/
+#Weather-Condition {
+    height: 100%;
+    width: 100%;
+}
+
 /*weather-info*/
-#weather-info{
-    background-color: yellow;
+#weather-info {
     grid-column: 1/2;
 }
 
 /*wind*/
-#wind{
-    background-color: lightgreen;
+#wind {
 }
 
 /*forecast*/
-#forecast{
-    background-color: orange;
+#forecast {
     grid-column: 1/-1;
 }

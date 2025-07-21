@@ -14,21 +14,33 @@
         <section id="search">
             <form id="search-form">
                 <label for="city-input"></label><input id="city-input" placeholder="Enter city name" type="text">
-                <button id="search-btn" type="submit">Search</button>
+                <button class="flex" id="search-btn" type="submit">Search</button>
             </form>
         </section>
 
-        <section id="weather-icon">
+        <section class="flex" id="weather-icon">
             <!--            here the icon for weather will appear-->
+            <img alt="Weather Icon" id="weather-icon-img" src="">
+            <h1 class="flex" id="Weather-Condition">SUNNY</h1>
         </section>
-        <section id="weather-info">
+        <section class="flex" id="weather-info">
             <!--            here the weather degree will appear-->
+            <h1 id="weather-temp">23&deg;C</h1>
         </section>
-        <section id="wind">
+        <section class="flex" id="wind">
             <!--            here the wind and humidity details will appear-->
+            <!--            here the details will be dynamically added by js.-->
         </section>
         <section id="forecast">
             <!--            here the forecast for the weather will appear-->
+            <div class="forecast-container">
+                <div class="forecast-item">
+                    <!--                    this way the js will insert the forecast details dynamically-->
+                    <!--                    <h2 class="forecast-day">Monday</h2>-->
+                    <!--                    <img alt="Forecast Icon" class="forecast-icon" src="">-->
+                    <!--                    <p class="forecast-temp">25&deg;C</p>-->
+                </div>
+            </div>
         </section>
 
 
