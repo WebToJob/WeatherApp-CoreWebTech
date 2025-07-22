@@ -1,9 +1,5 @@
-// loading env variables
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-const API_KEY = process.env.API_KEY;
+// Loading the API key from file js.
+import {API_KEY} from './Key.js';
 
 // function to fetch weather data from the API and create a array of objects
 export async function fetchWeatherData(city) {

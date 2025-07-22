@@ -12,8 +12,5 @@
   "main": "index.js",
   "scripts": {
     "test": "API testing"
-  },
-  "dependencies": {
-    "dotenv": "^17.2.0"
   }
 }
