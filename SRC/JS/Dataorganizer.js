@@ -14,6 +14,7 @@ export async function organizeWeatherData(city) {
             icon: data.current.condition.icon,
             windSpeedKph: data.current.wind_kph,
             humidity: data.current.humidity,
+            windSpeed: data.current.wind_kph,
             airQuality: data.current.air_quality.pm2_5
         };
     } catch (error) {
