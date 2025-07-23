@@ -1,4 +1,6 @@
 import {organizeWeatherData} from "./Dataorganizer.js";
+import {getLocationCoords} from "./GeoLocationFeature.js";
+// Asking for the geolocation of the user
 // this insert data into the HTML file dynamically from the API.
 
 // Targeting the HTML elements
@@ -38,11 +40,44 @@ async function updateWeatherData(city) {
     }
 }
 
+// Using async/await
+async function useCoordinates() {
+    try {
+        const coords = await getLocationCoords();
+        // use coords.latitude and coords.longitude here
+        console.log(coords);
+        // Call the updateWeatherData function with the coordinates
+        const city = `${coords.latitude},${coords.longitude}`;
+        await updateWeatherData(city);
+    } catch (error) {
+        // handle error
+        console.log(error);
+    }
+}
+
+// call the function
+document.addEventListener('DOMContentLoaded', useCoordinates);
+
+
 searchButton.addEventListener('click', (e) => {
     e.preventDefault();
     const city = inputField.value.trim();
     if (city) {
-        updateWeatherData(city)
+        updateWeatherData(city).then(r => {
+        })
+    }
+});
+inputField.addEventListener('keydown', (e) => {
+
+    if (e.key === "Enter") {
+        e.preventDefault();
+        const city = inputField.value.trim();
+        if (city) {
+            updateWeatherData(city).then(r => {
+            })
+        } else {
+            alert("Please enter a city name");
+        }
     }
 });
 
