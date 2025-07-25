@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #2f2d2d;
+    padding: 10px;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    justify-content: space-around;
+}
+
+.nav-links {
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font: bold 14px/1.5 "Roboto", sans-serif;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}

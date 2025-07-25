@@ -81,3 +81,5 @@ inputField.addEventListener('keydown', (e) => {
     }
 });
 
+// search how to do these
+// logoImg.item(0).children.item(0).src = weatherIcon.src;
