@@ -1,5 +1,5 @@
 // this will organize the data from the API and fetch related data from the API
-import {fetchWeatherData} from './APIEndpoint.js';
+import { fetchWeatherData } from './APIEndpoint.js';
 
 export async function organizeWeatherData(city) {
     try {
@@ -15,7 +15,18 @@ export async function organizeWeatherData(city) {
             windSpeedKph: data.current.wind_kph,
             humidity: data.current.humidity,
             windSpeed: data.current.wind_kph,
-            airQuality: data.current.air_quality.pm2_5
+            airQuality: data.current.air_quality.pm2_5,
+            forecast: data.forecast.forecastday.map((day) => {
+                return {
+                    date: day.date,
+                    condition: day.day.condition.text,
+                    maxTempC: day.day.maxtemp_c,
+                    minTempC: day.day.mintemp_c,
+                    avgHumidity: day.day.avghumidity,
+                    icon: day.day.condition.icon
+                };
+            })
+
         };
     } catch (error) {
         console.error('Error organizing weather data:', error);
