@@ -1,0 +1,118 @@
+<!-- create three cards in div container with simple UI and Good text (Lorem ipsum) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 200px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /*  Add classes to style the card when hovered as well as selected */
+        .card:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card:active {
+            background-color: green;
+            transform: translateY(0);
+        }
+
+        .card p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .card h3 {
+            color: #333;
+            font-size: 18px;
+        }
+
+        .card-container {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .selected {
+            background-color: #d1e7dd;
+            border: 2px solid #0f5132;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="card">
+            <h3>Card 5</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+        </div>
+    </div>
+</body>
+<script>
+    // adding event listener and finding e.target 
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            removeSelected(); // Remove previously selected card
+            card.classList.add('selected');
+            console.log('Card clicked:', e.target);
+            console.log('Card classList:', card.classList);
+            // You can add more functionality here, like changing styles or triggering actions
+        });
+    });
+
+    function removeSelected() {
+        document.querySelector('.selected')?.classList.remove('selected');
+    }
+
+
+</script>
+
+</html>
