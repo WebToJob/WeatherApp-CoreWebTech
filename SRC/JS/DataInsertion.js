@@ -36,7 +36,7 @@ async function updateWeatherData(city) {
         <p>Time: ${result['localTime']}</p>
         <p>Humidity: ${result['humidity']}%</p>
         <p>Air Quality (PM2.5): ${result['airQuality']}</p>
-`;
+        `;
         // Adding the forecast dynamically in the forecast-Weather-Container
         let forecastHTML = '';
         result['forecast'].forEach((day) => {
@@ -47,11 +47,12 @@ async function updateWeatherData(city) {
                 <p>Max Temp: ${day.maxTempC}&deg;C</p>
                 </div>
             `; // Clear previous forecast items
-            forecastWeatherContainer.innerHTML = forecastHTML;
         });
+        forecastWeatherContainer.innerHTML = forecastHTML;
     } catch (error) {
         forecastItem.innerHTML = `<p style="color:red;">Could not fetch data. Please try again.</p>`
         weatherIcon.style.display = 'none';
+        console.error(error); // Add this line to log the error
     }
 }
 

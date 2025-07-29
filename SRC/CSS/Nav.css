@@ -4,7 +4,6 @@
     position: sticky;
     z-index: 10;
     top: 0;
-    justify-content: space-around;
 }
 
 .nav-links {

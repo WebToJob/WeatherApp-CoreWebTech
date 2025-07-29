@@ -8,23 +8,23 @@
 
 /*search form element*/
 #search-form {
-    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    /* Remove height: 100% to prevent shrinking */
 }
 
 /*search button*/
-
 #search-btn {
-    width: 15%;
-    height: 25%;
+    min-width: 100px;
+    height: 35px;
     background-color: var(--button-background-color);
     border: none;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    flex-shrink: 0;
 }
 
 #search-btn:hover {
@@ -34,12 +34,14 @@
 }
 
 #city-input {
-    width: 70%;
-    height: 25%;
+    flex: 1 1 200px;
+    min-width: 0;
+    height: 35px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /*weather-icon*/
@@ -64,23 +66,18 @@
 }
 
 /*weather icon h1*/
-#Weather-Condition {
-    /*height: 100%;*/
-    /*width: 100%;*/
-}
+
 
 /*weather-info*/
 #weather-info {
     grid-column: 1/2;
 }
 
-/*wind*/
-#wind {
-}
 
 /*forecast*/
 #forecast {
     grid-column: 1/-1;
+    height: 50%;
 }
 
 #forecast-item {

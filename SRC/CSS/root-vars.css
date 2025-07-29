@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.flex-around {
+    justify-content: space-around;
+}
+
 :root {
     --body-background-color: linear-gradient(to right, #626298, #5252d5);
     --card-background-color: rgba(255, 255, 255, 0.92);
@@ -11,4 +15,17 @@
     --accent-background-color: #5c649a;
     --button-background-color: #7c83f7;
     --button-hover-background-color: #626298;
+    --forecast-background-color: #e0e4f2;
+    --forecast-item-background-color: #ffffff;
+    --forecast-item-hover-background-color: #d0d4e2;
+    --text-color: #333;
+    --forecast-text-color: #444;
+    --footer-background-color: rgba(255, 255, 255, 0.8);
+    --footer-text-color: #555;
+    --input-border-color: #ccc;
+    --input-focus-border-color: #7c83f7;
+    --input-background-color: #f9f9f9;
+    --input-text-color: #333;
+    --weather-icon-background: #f0f0ff;
+
 }
