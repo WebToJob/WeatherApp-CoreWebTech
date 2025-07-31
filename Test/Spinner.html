@@ -1,0 +1,45 @@
+<!-- Each corner’s curve will be a quarter of a circle (or ellipse), with radius equal to half of the width and height, not based on the area. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner</title>
+</head>
+
+<body>
+    <div class="spinner"></div>
+</body>
+
+<style>
+    body {
+        background-color: #252525;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .spinner {
+        height: 80px;
+        width: 80px;
+        border: 15px solid #f3f3f3;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin infinite 1.5s linear;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+</html>
