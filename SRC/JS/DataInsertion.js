@@ -1,5 +1,6 @@
 import { organizeWeatherData } from "./DataOrganizer.js";
 import { getLocationCoords } from "./GeoLocationFeature.js";
+import { showSpinner, hideSpinner } from "./SpinnerAllocator.js";
 // Asking for the geolocation of the user
 // this insert data into the HTML file dynamically from the API.
 
@@ -19,6 +20,7 @@ async function updateWeatherData(city) {
     try {
         // Function to insert data into the HTML file
         // First Get the data from the API in an Array form using DataOrganization.js file.
+        showSpinner(); // Show the spinner while fetching data
         const result = await organizeWeatherData(city)
         weatherIcon.style.display = 'block'; // Show the weather icon
         weatherIcon.src = result['icon'];
@@ -48,6 +50,7 @@ async function updateWeatherData(city) {
             `; // Clear previous forecast items
         });
         forecastWeatherContainer.innerHTML = forecastHTML;
+        hideSpinner(); // Hide the spinner after data is fetched
     } catch (error) {
         forecastItem.innerHTML = `<p style="color:red;">Could not fetch data. Please try again.</p>`
         weatherIcon.style.display = 'none';
