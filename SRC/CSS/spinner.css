@@ -4,11 +4,11 @@
 .spinner-container {
     position: absolute;
     width: 100%;
-    background-color: var(--card-background-color);
+    background-color: #ededed;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 1;
 }
 
 .hidden {
@@ -16,9 +16,9 @@
 }
 
 #spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--button-background-color);
+    width: 100px;
+    height: 100px;
+    border: 10px solid var(--button-background-color);
     border-top-color: var(--button-hover-background-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;

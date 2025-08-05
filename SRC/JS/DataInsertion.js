@@ -20,7 +20,6 @@ async function updateWeatherData(city) {
         // Function to insert data into the HTML file
         // First Get the data from the API in an Array form using DataOrganization.js file.
         const result = await organizeWeatherData(city)
-        console.log(result.forecast)
         weatherIcon.style.display = 'block'; // Show the weather icon
         weatherIcon.src = result['icon'];
         weatherCondition.innerText = result['condition'];
@@ -60,8 +59,6 @@ async function updateWeatherData(city) {
 async function useCoordinates() {
     try {
         const coords = await getLocationCoords();
-        // use coords.latitude and coords.longitude here
-        console.log(coords);
         // Call the updateWeatherData function with the coordinates
         const city = `${coords.latitude},${coords.longitude}`;
         await updateWeatherData(city);
